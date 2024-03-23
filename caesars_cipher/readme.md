@@ -2,7 +2,7 @@
 
 This [module](./caesars_cipher.py) implements a Caesar cipher-based encryption and decryption tool for text strings in English. 
 
-# Description📖:
+## Description📖:
 The cipher operates on individual words within the input string, with each word being encrypted or decrypted based on a cyclic shift determined by its length.
 
 The Caesar cipher employed by the program preserves the case of letters, ensuring that lowercase characters remain lowercase and uppercase characters remain uppercase. 
@@ -14,7 +14,7 @@ This project aims to provide a versatile solution for encrypting and decrypting 
 ## Usage🔄:
 The program takes an input string of text, encrypts or decrypts it based on the user's choice, and returns the modified text while preserving the original word boundaries.
 
-## Example Usage:
+## Example Usage👀:
 - Encrypting: ```"Hello World" -> "Lipps Asvph"```
 - Decrypting: ```"Lipps Asvph" -> "Hello World"```
 
