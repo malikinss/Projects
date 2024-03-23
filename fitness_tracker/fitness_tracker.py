@@ -47,10 +47,10 @@ def get_spent_calories(dist, current_time):
 
 def get_achievement(dist):
     achievements = {
-        (6.5, float('inf')): 'Отличный результат! Цель достигнута',
-        (3.9, 6.5): 'Неплохо! День был продуктивным.',
-        (2, 3.9): 'Маловато, но завтра наверстаем!',
-        (0, 2): 'Лежать тоже полезно. Главное — участие, а не победа!'
+        (6.5, float('inf')): 'Excellent result! Goal achieved',
+        (3.9, 6.5): 'Not bad! The day was productive.',
+        (2, 3.9): "Not enough, but we'll catch up tomorrow!",
+        (0, 2): 'Lying down is also useful. The main thing is participation, not victory!'
     }
 
     for dist_range, message in achievements.items():
