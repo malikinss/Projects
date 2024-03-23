@@ -15,7 +15,7 @@ This project aims to provide a versatile solution for encrypting and decrypting 
 The program takes an input string of text, encrypts or decrypts it based on the user's choice, and returns the modified text while preserving the original word boundaries.
 
 ## Example Usage:
-Encrypting: ```"Hello World" -> "Lipps Asvph"```
-Decrypting: ```"Lipps Asvph" -> "Hello World"```
+- Encrypting: ```"Hello World" -> "Lipps Asvph"```
+- Decrypting: ```"Lipps Asvph" -> "Hello World"```
 
 The program also offers functionalities to interact with the user through a command-line interface, including greeting and farewell messages, input validation, and saving the encrypted or decrypted result to a file named ```"result.txt"```.
