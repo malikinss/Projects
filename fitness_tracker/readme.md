@@ -1,4 +1,4 @@
-# Fitness-Tracker
+# Fitness-Tracker🏃‍♂️
 
 Software module for processing data from the "runaway" fitness tracker from Unicorn.
 
