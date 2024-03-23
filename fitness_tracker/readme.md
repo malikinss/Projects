@@ -4,7 +4,7 @@
 
 
 ## Module task:
-- receive and check incoming data packets of the form package = (time, steps);
+- receive and check incoming data packets of the form ```package = (time, steps);```
 - save and process this data in the module;
 - display in the terminal a summary for the period from the beginning of the day to the time transmitted in the data packet;
 - return saved data for processing in other applications.
