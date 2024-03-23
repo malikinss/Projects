@@ -1,4 +1,4 @@
-# Caesars-Chiper🗝️
+# Caesars-Cipher🗝️
 
 This [module](./caesars_chiper.py) implements a Caesar cipher-based encryption and decryption tool for text strings in English. 
 

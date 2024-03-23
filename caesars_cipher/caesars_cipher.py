@@ -2,44 +2,36 @@ from random import randint
 import os
 import time
 
-
 def clear_screen(seconds):
     time.sleep(seconds)
     os.system('cls')
-
 
 def hello_user(name):
     print('\n Hello ', name)
     clear_screen(2)
 
-
 def outro(name):
     print("\n Goodbye", name)
     clear_screen(2)  
 
-
 def post_intro():
     print("\n Now I'm going to ask you to answer a few questions.\n Well let's get started.\n")
     clear_screen(3.5)
-
 
 def intro():
     clear_screen(1)
     print("\n Hello my name is Caesar and I will help you encrypt or decrypt a message using my cipher.")
     print(' What is your name?\n')
 
-
 def input_err():
     print('\n Incorrect input, please try again!')
     clear_screen(1)
-
 
 def get_user_input():
     answer = input('\n Please enter your answer and press enter...\n')
     clear_screen(1)
 
     return answer
-
 
 def is_input_empty(user_input):
     '''
@@ -60,7 +52,6 @@ def is_input_empty(user_input):
     
     return False
 
-
 def get_correct_user_input():
     '''
     Takes input from the user and checks if it's empty. 
@@ -78,13 +69,11 @@ def get_correct_user_input():
 
     return user_input  
 
-
 def print_main_menu():
     clear_screen(0.5)
     print("\n What do you want to do? \n Enter the number of one of the options below.")
     print(" 1. I want to encrypt a message")
     print(" 2. I want to decrypt the message")
-
 
 def get_new_ascii_position(letter, shift, mode):
     """
@@ -125,7 +114,6 @@ def get_new_ascii_position(letter, shift, mode):
             new_ascii_position = new_ascii_position + 26
 
     return new_ascii_position    
-
 
 def get_encrypted_or_decrypted_str(what_to_do, words):
     """
@@ -169,13 +157,11 @@ def get_encrypted_or_decrypted_str(what_to_do, words):
     # Remove the trailing space and return the resulting string
     return new_string.rstrip()
 
-
 def get_words_list_from_user_input():
     string_from_user = get_correct_user_input()
     list_of_words_from_string = string_from_user.split()
     
     return list_of_words_from_string
-
 
 def encrypt_caesar_cipher():
     """
@@ -199,7 +185,6 @@ def encrypt_caesar_cipher():
 
     return new_string
 
-
 def decrypt_caesar_cipher():
     """
     Decrypts a Caesar cipher encrypted text provided by the user.
@@ -222,7 +207,6 @@ def decrypt_caesar_cipher():
     new_string = get_encrypted_or_decrypted_str('decrypt', words_to_decrypt)
 
     return new_string
-
 
 def save_to_the_result_file(string_to_save):
     """
@@ -253,7 +237,6 @@ def save_to_the_result_file(string_to_save):
         # Close the file (closing is automatically handled by 'with' statement)
 
     print('\nThe result is written to the file result.txt')
-
 
 def select_and_execute_operating_mode():
     """
@@ -291,7 +274,6 @@ def select_and_execute_operating_mode():
 
     save_to_the_result_file(result_string)
 
-
 def caesar_cipher():
     intro()
 
@@ -301,6 +283,5 @@ def caesar_cipher():
     select_and_execute_operating_mode()
 
     outro(username)
-
 
 caesar_cipher()
