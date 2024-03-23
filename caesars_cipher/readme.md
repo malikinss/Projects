@@ -1,6 +1,6 @@
 # Caesars-Cipher🗝️
 
-This [module](./caesars_chiper.py) implements a Caesar cipher-based encryption and decryption tool for text strings in English. 
+This [module](./caesars_cipher.py) implements a Caesar cipher-based encryption and decryption tool for text strings in English. 
 
 # Description📖:
 The cipher operates on individual words within the input string, with each word being encrypted or decrypted based on a cyclic shift determined by its length.
