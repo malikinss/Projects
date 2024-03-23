@@ -1,22 +1,3 @@
-'''
-Project Description:
-
-This Python program is designed to encrypt or decrypt a line of text in English, where each word in the input string is individually encrypted or decrypted using a Caesar cipher with a cyclic shift based on the length of the respective word. 
-The Caesar cipher preserves the case of the letters, ensuring that lowercase letters remain lowercase, and uppercase letters remain uppercase. 
-Additionally, the program assumes that there is a single space character between different words in the input string.
-
-This project aims to provide a versatile tool for encrypting and decrypting text using a customizable Caesar cipher based on word lengths.
-
-Usage:
-    The program takes an input string of text, performs the specified encryption or decryption operation on each word within the text, and returns the modified text while maintaining the original word boundaries.
-
-Example Usage:
-    - Encrypting: "Hello World" -> "Lipps Asvph"
-    - Decrypting: "Lipps Asvph" -> "Hello World"
-
-'''
-
-
 from random import randint
 import os
 import time
