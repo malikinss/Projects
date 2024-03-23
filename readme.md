@@ -11,6 +11,9 @@ Module for processing data from the "runaway" fitness tracker by Unicorn. Receiv
 ### [Caesars-Cipher🗝️](./caesars_cipher): 
 Module encrypts and decrypts English text using a Caesar cipher, adjusting the shift based on word length. It maintains letter case and word boundaries, offering a user-friendly command-line interface with input validation and result saving to ```result.txt```.
 
+### [Password-Generator🔐](./password_generator):
+This is a Python module for generating secure passwords with customizable settings. It simplifies the process by allowing users to create multiple passwords at once, tailored to specific requirements, enhancing online security.
+
 ## Target🎯
 The purpose of this repository is to showcase my academic achievements and develop my skills in programming, data analysis, web development and other areas.
 Here I will constantly update and add new projects as they are completed.

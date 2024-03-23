@@ -1,71 +1,42 @@
-'''
-Project Description:
-
-This program is designed to generate a specified number of passwords with customizable settings. 
-The program offers smart controls for determining the length of the password and allows users to 
-define which characters to include and exclude from the generated passwords. 
-It provides a flexible and secure way to create passwords tailored to specific requirements.
-
-Project Features:
-- Generate multiple passwords at once.
-- Customize password length.
-- Specify characters to include in generated passwords.
-- Exclude specific characters from the generated passwords.
-- Ensures password security and complexity according to user preferences.
-
-This project aims to simplify the process of creating secure passwords with tailored settings, 
-making it a valuable tool for enhancing online security.
-
-'''
-
 from random import randint
 import os
 import time
-
 
 DIGITS = '0123456789'
 LOWERCASE_LETTERS = 'abcdefghijklmnopqrstuvwxyz'
 UPPERCASE_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 PUNCTUATION = '!#$%&*+-=?@^_'
 
-
 def clear_screen(seconds):
     time.sleep(seconds)
     os.system('cls')
-
 
 def hello_user(name):
     print('\n Hello ', name)
     clear_screen(2)
 
-
 def outro(name):
     print("\n Goodbye", name)
     clear_screen(2)  
 
-
 def post_intro():
     print("\n Now I'm going to ask you to answer a few questions.\n Well let's get started.\n")
     clear_screen(3.5)
-
 
 def intro():
     clear_screen(1)
     print('\n Hello, I am a Secure Password Generator and I will help you generate a strong password.')
     print(' What is your name?\n')
 
-
 def input_err():
     print('\n Incorrect input, please try again!')
     clear_screen(1)
-
 
 def get_user_input():
     answer = input('\n Please enter your answer and press enter...\n')
     clear_screen(1)
 
     return answer
-
 
 def is_input_empty(user_input):
     '''
@@ -86,7 +57,6 @@ def is_input_empty(user_input):
     
     return False
 
-
 def get_correct_user_input():
     '''
     Takes input from the user and checks if it's empty. 
@@ -104,7 +74,6 @@ def get_correct_user_input():
 
     return user_input  
 
-
 def check_num_of_passwords(user_setting):
     '''
     This function checks whether the setting received from the user for the 
@@ -118,7 +87,6 @@ def check_num_of_passwords(user_setting):
     - bool: True if user_setting matches program allowed number, False otherwise.
  
     '''
-
     
     if user_setting.isdigit():
         is_program_allowed_number = int(user_setting) > 0
@@ -129,7 +97,6 @@ def check_num_of_passwords(user_setting):
     input_err()
 
     return False
-
 
 def get_number_of_passwords(question):
     '''
@@ -151,7 +118,6 @@ def get_number_of_passwords(question):
             
     return int(number_of_password)
 
-
 def check_len_of_password(length_setting_from_user):
     '''
     Checks whether the length setting for generated passwords received from the user matches the number allowed by the program and returns True or False depending on the result of the check.
@@ -163,7 +129,6 @@ def check_len_of_password(length_setting_from_user):
     - bool: True if the user's length setting matches the program's allowed length, False otherwise.
     
     '''
-    
 
     if length_setting_from_user.isdigit():
         length_setting_from_user = int(length_setting_from_user)
@@ -179,7 +144,6 @@ def check_len_of_password(length_setting_from_user):
     input_err()
     
     return False
-
 
 def get_len_of_password(question):
     '''
@@ -204,11 +168,9 @@ def get_len_of_password(question):
             
     return int(password_length)
 
-
 def print_yes_or_no():
     print("\n if yes enter 'y'")
     print(" if no enter 'n': \n")
-
 
 def get_yes_or_no(question):
     """
@@ -241,7 +203,6 @@ def get_yes_or_no(question):
             input_err()
 
         clear_screen(2)    
-
 
 def get_answers_for_questions():
     """
@@ -283,7 +244,6 @@ def get_answers_for_questions():
     
     return password_settings_dict
 
-
 def get_dict_of_settings():
     answers = get_answers_for_questions()
 
@@ -304,7 +264,6 @@ def get_dict_of_settings():
         answers = get_answers_for_questions()
 
     return answers
-        
 
 def get_allowed_chars(dict_of_settings):
     chars = ''
@@ -323,12 +282,10 @@ def get_allowed_chars(dict_of_settings):
 
     return chars
 
-
 def get_any_char_from_allowed_chars(chars):
     number_allowed_chars = len(chars)
     char = chars[randint(0, number_allowed_chars - 1)]
     return char
-
 
 def if_ambigious_char_take_another(dict_of_settings, char, chars):
     if dict_of_settings['ambigious_chars']:
@@ -336,7 +293,6 @@ def if_ambigious_char_take_another(dict_of_settings, char, chars):
                     char = get_any_char_from_allowed_chars(chars)
 
     return char                
-
 
 def generate_passwords(dict_of_settings):
     '''
@@ -366,7 +322,6 @@ def generate_passwords(dict_of_settings):
         passwords.append(current_password)
 
     return passwords        
-
             
 def password_generator():
     intro()
@@ -383,6 +338,5 @@ def password_generator():
     clear_screen(10)
 
     outro(name)
-
 
 password_generator()
