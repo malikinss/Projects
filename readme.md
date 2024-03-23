@@ -1,19 +1,19 @@
-# Мои учебные проекты
+# My educational projects
 
-Этот репозиторий содержит набор моих учебных проектов, созданных во время обучения программированию и другим техническим навыкам. 
-Здесь вы найдете разнообразные проекты, которые я выполнял в рамках курсов, самостоятельных исследований и практических заданий.
+This repository contains a collection of my classroom projects created while learning programming and other technical skills.
+Here you will find a variety of projects that I have completed through courses, independent studies, and practical assignments.
 
-## Структура репозитория
+## Repository structure
 
-Fitness-Tracker: Модуль для обработки данных фитнес-трекера "runaway" от Unicorn. Получает данные в формате (время, шаги), сохраняет, выводит сводку в терминал и возвращает данные для дальнейшей обработки. Включает мотивационные сообщения в зависимости от пройденного расстояния.
+Fitness-Tracker: Module for processing data from the "runaway" fitness tracker from Unicorn. Receives data in a format (time, steps), saves it, outputs a summary to the terminal and returns the data for further processing. Includes motivational messages based on distance traveled.
 
-## Цель
-Цель этого репозитория - демонстрация моих учебных достижений и развитие навыков программирования, анализа данных, веб-разработки и других областей. 
-Здесь я буду постоянно обновлять и добавлять новые проекты по мере их завершения.
+## Target
+The purpose of this repository is to showcase my academic achievements and develop my skills in programming, data analysis, web development and other areas.
+Here I will constantly update and add new projects as they are completed.
 
-# Помощь и обратная связь
-Если у вас есть предложения, вопросы или замечания относительно любого из проектов, не стесняйтесь открывать Issue или делать Pull Request. Ваша обратная связь ценна для меня и поможет сделать мои проекты еще лучше.
+## Help and feedback
+If you have suggestions, questions or comments regarding any of the projects, feel free to open an Issue or make a Pull Request. Your feedback is valuable to me and will help make my projects even better.
 
-# Лицензия
-Все проекты в этом репозитории лицензированы под [MIT](./LICENSE.txt). 
-Подробнее о лицензии можно узнать в соответствующем файле.
+## License
+All projects in this repository are licensed under [MIT](./LICENSE.txt).
+More details about the license can be found in the corresponding file.
