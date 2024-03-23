@@ -12,7 +12,10 @@ Module for processing data from the "runaway" fitness tracker by Unicorn. Receiv
 Module encrypts and decrypts English text using a Caesar cipher, adjusting the shift based on word length. It maintains letter case and word boundaries, offering a user-friendly command-line interface with input validation and result saving to ```result.txt```.
 
 ### [Password-Generator🔐](./password_generator):
-This is a Python module for generating secure passwords with customizable settings. It simplifies the process by allowing users to create multiple passwords at once, tailored to specific requirements, enhancing online security.
+Module generates secure passwords with customizable settings. It simplifies the process by allowing users to create multiple passwords at once, tailored to specific requirements, enhancing online security.
+
+### [Magic-Ball-8🔐](./magic_ball_8):
+Module offers users a comic way to predict the future. With 20 randomly generated answers neatly categorized into positive, hesitantly positive, neutral, and negative responses, it adds a touch of fun to any question.
 
 ## Target🎯
 The purpose of this repository is to showcase my academic achievements and develop my skills in programming, data analysis, web development and other areas.
