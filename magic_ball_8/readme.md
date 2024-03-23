@@ -1,4 +1,4 @@
-# Magic-Ball-8🗝️
+# Magic-Ball-8🎱
 
 This [module](./magic_ball_8.py) is a comic way to predict the future. The program should ask the user to ask a question in order to randomly answer it. 
 

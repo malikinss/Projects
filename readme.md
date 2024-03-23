@@ -14,7 +14,7 @@ Module encrypts and decrypts English text using a Caesar cipher, adjusting the s
 ### [Password-Generator🔐](./password_generator):
 Module generates secure passwords with customizable settings. It simplifies the process by allowing users to create multiple passwords at once, tailored to specific requirements, enhancing online security.
 
-### [Magic-Ball-8🔐](./magic_ball_8):
+### [Magic-Ball-8🎱](./magic_ball_8):
 Module offers users a comic way to predict the future. With 20 randomly generated answers neatly categorized into positive, hesitantly positive, neutral, and negative responses, it adds a touch of fun to any question.
 
 ## Target🎯
