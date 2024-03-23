@@ -1,6 +1,6 @@
 # Fitness-Tracker🏃‍♂️
 
-Software module for processing data from the "runaway" fitness tracker from Unicorn.
+[Software module](./fitness_tracker.py) for processing data from the "runaway" fitness tracker from Unicorn.
 
 
 ## Module task:
