@@ -16,7 +16,7 @@ The purpose of this repository is to showcase my academic achievements and devel
 Here I will constantly update and add new projects as they are completed.
 
 ## Help and feedback🩼
-If you have suggestions, questions or comments regarding any of the projects, feel free to open an Issue or make a Pull Request. Your feedback is valuable to me and will help make my projects even better.
+If you have suggestions, questions or comments regarding any of the projects, feel free to open an ```Issue``` or make a ```Pull Request```. Your feedback is valuable to me and will help make my projects even better.
 
 ## License⚖️
 All projects in this repository are licensed under [MIT](./LICENSE.txt).
