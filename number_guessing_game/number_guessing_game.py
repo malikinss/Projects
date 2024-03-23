@@ -1,24 +1,3 @@
-'''
-Project Description: The program generates a random number in the range from 1 to 100 and asks the user to guess this number.
-
-If the user's guess is greater than a random number, the program should display the message 'Too high, try again'.
-
-If the guess is less than the random number, the program should display the message 'Too low, try again'.
-
-If the user guesses the number, the program should congratulate him and display the message 'You guessed it, congratulations!'.
-
-Project components:
-
-Integers (type int);
-Variables;
-Data input/output (input() and print() functions);
-Conditional statement (if/elif/else);
-while loop;
-Endless cycle;
-Operators break, continue;
-Working with the random module to generate random numbers.
-'''
-
 from random import randint
 import os
 import time
@@ -28,11 +7,9 @@ def clear_screen(seconds):
     time.sleep(seconds)
     os.system('cls')
 
-
 def input_err():
     print('Incorrect input, please try again!')
     clear_screen(1)
-
 
 def intro():
     clear_screen(1)
@@ -42,23 +19,19 @@ def intro():
     clear_screen(1)
     return name
 
-
 def outro(name):
     print("Goodbye", name)
     clear_screen(3)  
-
 
 def cgn_rules():
     print('Think of a number from 1 to 100 inclusive...')
 
     clear_screen(5)
 
-
 def ugn_rules():
     print('The computer thinks a number from 1 to 100 inclusive...')
 
     clear_screen(5)
-
 
 def is_play_again():
     clear_screen(1)
@@ -82,7 +55,6 @@ def is_play_again():
 
 
     clear_screen(1)
-
 
 
 def check_and_print_ugn(users_guess_number, random_number):
@@ -109,10 +81,8 @@ def trying_to_guess_the_number(random_number):
 
         clear_screen(2)
 
-
 def get_guess_number():
     return randint(1, 100)        
-
 
 def user_answer_choose_game():
     clear_screen(0.5)
@@ -127,30 +97,24 @@ def user_answer_choose_game():
 
     return choice
 
-
 def user_answer_vars():
     print("\n1. Yes, that's my number.")
     print('2. No, my number is higher')
     print('3. No, my number is lower')
     print("4. I don't want to play anymore")
 
-
-
 def get_computer_guesses(left, right):
         guess = int((right + left) / 2)
         print("\nI think your number is: ", guess)
         return guess
 
-
 def print_one_more_time():
     print('\nI will try to guess one more time!')
     clear_screen(1)
 
-
 def if_computer_won():
     print("Great! I won!")
     return True
-
 
 def get_user_cgn_answer():
     user_answer_vars()
@@ -160,17 +124,13 @@ def get_user_cgn_answer():
 
     return answer
 
-
 def if_user_num_higher_get_new_left(guess):
     print_one_more_time()
     return (guess + 1)
 
-
 def if_user_num_lower_get_new_right(guess):
     print_one_more_time()
     return (guess - 1)
-
-
 
 def ugn_game_process():
     random_number = get_guess_number()
@@ -207,7 +167,6 @@ def cgn_game_process():
 
     return True    
 
-
 def user_guesses_number():
     ugn_rules()
 
@@ -217,7 +176,6 @@ def user_guesses_number():
         ugn_game_process()
         play_flag = is_play_again()
         clear_screen(1)
-
 
 def computer_guesses_number():
     cgn_rules()
@@ -230,7 +188,6 @@ def computer_guesses_number():
         if play_flag:
             play_flag = is_play_again()
             clear_screen(1)
-
 
 def chosen_game(user_answer):
     if user_answer == '1':
@@ -247,7 +204,6 @@ def chosen_game(user_answer):
     
     return True    
 
-
 def number_guessing_game():
     name = intro()
     play_flag = True
@@ -257,6 +213,5 @@ def number_guessing_game():
         play_flag = chosen_game(user_answer)
 
     outro(name)    
-
 
 number_guessing_game()

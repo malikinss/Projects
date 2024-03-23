@@ -10,11 +10,11 @@ Users interact with the program by asking questions, to which the Magic 8 Ball r
 The Magic 8 Ball provides 20 possible answers, categorized into four groups:
 
 ### Positive😊:
-        - Undoubtedly
-        - It's a foregone conclusion
-        - Without any doubts
-        - Definitely yes
-        - You can be sure of this
+    - Undoubtedly
+    - It's a foregone conclusion
+    - Without any doubts
+    - Definitely yes
+    - You can be sure of this
 
 ### Hesitantly positive🙂:
     - I think so
