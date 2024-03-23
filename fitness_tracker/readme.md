@@ -32,7 +32,7 @@ Motivational message based on results.
 ## Incoming data
 The module receives data packets in the form of tuples from the controller chip.
 Packets are transmitted to the program at the time the tracker is accessed (when the button is pressed).
-Order of values in the data packet: (<time>, <steps>)
+Order of values in the data packet: ```(<time>, <steps>)```
 ```bash
 <time>: time of creation of the package; str; format: 'HH:MM:SS'.
 <steps>: the number of steps taken by the user since the last contact; int.
@@ -57,4 +57,4 @@ The distance was 9.95 km.
 You burned 1512.00 kcal.
 Excellent result! The goal has been achieved.
 ```
-The program must return the storage_data dictionary so that other programs can continue processing the data.
+The program must return the ```storage_data``` dictionary so that other programs can continue processing the data.
