@@ -1,0 +1,6 @@
+# Ignore venv (virtual environment)
+venv/
+
+# Ignore execution files
+*.exe
+*.out
