@@ -1,4 +1,4 @@
-# Calorie calculator 💪🥗🍎
+# Calorie calculator💪🥗🍎
 This project is a calculator for counting calories. 
 It is designed for users who want to control their diet and monitor their calorie intake.
 
