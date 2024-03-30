@@ -17,15 +17,11 @@ The calorie calculator provides the following features:
 [Calculator.py](./Calculator.py) - contains the main class ```Calculator``` and the class ```Record``` for storing food intake records.
 
 ### Methods of the Calculator class:
-```__init__(limit: int)```: Initializes the calculator with the given daily calorie limit.
-
-```add_record(record)```: Adds a meal record to the list of records.
-
-```get_today_stats()```: Returns the number of calories consumed for the current day.
-
-```get_week_stats()```: Returns the total calories consumed over the last 7 days.
-
-```get_todays_remained()```: Returns the remaining calorie limit for the current day.
+- ```__init__(limit: int)```: Initializes the calculator with the given daily calorie limit.
+- ```add_record(record)```: Adds a meal record to the list of records.
+- ```get_today_stats()```: Returns the number of calories consumed for the current day.
+- ```get_week_stats()```: Returns the total calories consumed over the last 7 days.
+- ```get_todays_remained()```: Returns the remaining calorie limit for the current day.
 
 [CaloriesCalculator.py](CaloriesCalculator.py) contains a subclass ```CaloriesCalculator``` that inherits the functionality of the main class ```Calculator``` and adds additional methods.
 
