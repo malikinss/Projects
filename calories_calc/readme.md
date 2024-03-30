@@ -1,64 +1,44 @@
-# Калькулятор калорий
-Этот проект представляет собой калькулятор для подсчёта калорий. Он разработан для пользователей, которые желают контролировать свой рацион питания и следить за употреблением калорий.
+# Calorie calculator 💪🥗🍎
+This project is a calculator for counting calories. 
+It is designed for users who want to control their diet and monitor their calorie intake.
 
-## Описание функциональности
-Калькулятор калорий предоставляет следующие возможности:
+## Functionality
+The calorie calculator provides the following features:
 
-1. Сохранение новой записи о приёме пищи: Пользователь может добавлять записи о приёме пищи с указанием количества потребленных калорий и комментарием.
+1. Saving a new meal record: The user can add food records with the number of calories consumed and a comment.
 
-2. Получение статистики за сегодня: Калькулятор вычисляет количество потребленных калорий за текущий день.
+2. Getting statistics for today: The calculator calculates the number of calories consumed for the current day.
 
-3. Определение доступных калорий: Калькулятор определяет, сколько ещё калорий можно/нужно получить сегодня в соответствии с установленным пользователем дневным лимитом.
+3. Determining available calories: The calculator determines how many more calories you can/need to get today in accordance with the daily limit set by the user.
 
-4. Получение статистики за последние 7 дней: Калькулятор вычисляет общее количество потребленных калорий за последние 7 дней.
+4. Get statistics for the last 7 days: The calculator calculates the total number of calories consumed over the last 7 days.
 
-## Использование
-[Calculator.py](./Calculator.py) - содержит основной класс ```Calculator``` и класс ```Record``` для хранения записей о приёме пищи.
+## Usage
+[Calculator.py](./Calculator.py) - contains the main class ```Calculator``` and the class ```Record``` for storing food intake records.
 
-### Методы класса Calculator:
-```__init__(limit: int)```: Инициализирует калькулятор с заданным дневным лимитом калорий.
-```add_record(record)```: Добавляет запись о приёме пищи в список записей.
-```get_today_stats()```: Возвращает количество потребленных калорий за текущий день.
-```get_week_stats()```: Возвращает общее количество потребленных калорий за последние 7 дней.
-```get_todays_remained()```: Возвращает оставшийся лимит калорий на текущий день.
+### Methods of the Calculator class:
+```__init__(limit: int)```: Initializes the calculator with the given daily calorie limit.
+```add_record(record)```: Adds a meal record to the list of records.
+```get_today_stats()```: Returns the number of calories consumed for the current day.
+```get_week_stats()```: Returns the total calories consumed over the last 7 days.
+```get_todays_remained()```: Returns the remaining calorie limit for the current day.
 
-[CaloriesCalculator.py](CaloriesCalculator.py) содержит подкласс ```CaloriesCalculator```, который наследует функциональность основного класса ```Calculator``` и добавляет дополнительные методы.
+[CaloriesCalculator.py](CaloriesCalculator.py) contains a subclass ```CaloriesCalculator``` that inherits the functionality of the main class ```Calculator``` and adds additional methods.
 
-### Дополнительные методы класса CaloriesCalculator:
-```get_today_calories_remained()```: Возвращает сообщение о том, сколько ещё калорий можно/нужно получить сегодня.
+### Additional methods of the CaloriesCalculator class:
+```get_today_calories_remained()```: Returns a message about how many more calories can/should be obtained today.
 
+## Usage example:
+An example of use is given in the file [test.py](./test.py)
 
-## Пример использования:
-```python
-import Calculator as calc
-from CaloriesCalculator import CaloriesCalculator
+### Important Notice:
+For the calculator to work correctly, you must pass the correct arguments when calling methods and using classes.
 
-# Создание экземпляра калькулятора с установленным лимитом калорий
-kcals_calculator = CaloriesCalculator(1000)
+Be careful when working with the calculator and watch your diet!
 
-# Добавление записей о приёме пищи
-kcals_calculator.add_record(calc.Record(amount=145, comment='coffe'))
-kcals_calculator.add_record(calc.Record(amount=300, comment='lunch'))
-kcals_calculator.add_record(calc.Record(amount=3000, comment='bar', date='08.11.2019'))
+## Author:
+The project was developed by [Sam Malikin]([https://www.linkedin.com/in/kelevv/]).
 
-# Вывод сообщения о доступных калориях для приёма пищи сегодня
-print(kcals_calculator.get_today_calories_remained())
-
-# Добавление ещё одной записи о приёме пищи
-kcals_calculator.add_record(calc.Record(amount=3000, comment='bar'))
-
-# Вывод сообщения о доступных калориях для приёма пищи сегодня
-print(kcals_calculator.get_today_calories_remained())
-```
-
-## Важное замечание
-Для корректной работы калькулятора необходимо передавать правильные аргументы при вызове методов и использовании классов.
-
-Будьте внимательны при работе с калькулятором и следите за своим рационом питания!
-
-## Автор
-Проект разработан [Sam Malikin]([https://www.linkedin.com/in/kelevv/]).
-
-Лицензия
-Этот проект лицензируется в соответствии с условиями лицензии [MIT].
+## License:
+This project is licensed under the terms of the [MIT] license.
 
