@@ -41,4 +41,3 @@ The project was developed by [Sam Malikin](https://www.linkedin.com/in/kelevv/).
 
 ## License:
 This project is licensed under the terms of the [MIT] license.
-
