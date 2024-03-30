@@ -34,7 +34,7 @@ An example of using the project is presented in the [test.py](./test.py) file.
 
 ## Important Notice:
 For the calculator to work correctly, you must correctly pass arguments when calling methods and using classes.
-Please make sure you have Python 3.11 installed for the project to run correctly.
+Please make sure you have ```Python 3.1X``` installed for the project to run correctly.
 Be careful when working with the calculator and keep track of your expenses!
 
 ## Author:
