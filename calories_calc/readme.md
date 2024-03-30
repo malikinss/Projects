@@ -29,11 +29,10 @@ The calorie calculator provides the following features:
 - ```get_today_calories_remained()```: Returns a message about how many more calories can/should be obtained today.
 
 ## Usage example:
-An example of use is given in the file [test.py](./test.py)
+An example of using the project is presented in the [test.py](./test.py) file.
 
-### Important Notice:
+## Important Notice:
 For the calculator to work correctly, you must pass the correct arguments when calling methods and using classes.
-
 Be careful when working with the calculator and watch your diet!
 
 ## Author:
