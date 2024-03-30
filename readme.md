@@ -20,6 +20,15 @@ Module offers users a comic way to predict the future. With 20 randomly generate
 ### [Number-Guessing-Game🎰](./number_guessing_game):
 This Module is a simple number guessing game. The user tries to guess a randomly generated number between 1 and 100. The program provides feedback on each guess and congratulates the user upon correct guessing. Run the script, follow the prompts, and enjoy playing!
 
+### [Calories-Calculator💪🥗🍎](./calories_calc):
+This project is a calculator for counting calories. 
+It is designed for users who want to control their diet and monitor their calorie intake.
+
+### [Money-Calculator💰](./money_calc):
+This project is a calculator for counting money. 
+It is designed for users who want to control their expenses and income.
+
+
 ## Target🎯
 The purpose of this repository is to showcase my academic achievements and develop my skills in programming, data analysis, web development and other areas.
 Here I will constantly update and add new projects as they are completed.
