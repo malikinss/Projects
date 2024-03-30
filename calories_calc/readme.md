@@ -26,7 +26,7 @@ The calorie calculator provides the following features:
 [CaloriesCalculator.py](CaloriesCalculator.py) contains a subclass ```CaloriesCalculator``` that inherits the functionality of the main class ```Calculator``` and adds additional methods.
 
 ### Additional methods of the CaloriesCalculator class:
-```get_today_calories_remained()```: Returns a message about how many more calories can/should be obtained today.
+- ```get_today_calories_remained()```: Returns a message about how many more calories can/should be obtained today.
 
 ## Usage example:
 An example of use is given in the file [test.py](./test.py)
@@ -37,7 +37,7 @@ For the calculator to work correctly, you must pass the correct arguments when c
 Be careful when working with the calculator and watch your diet!
 
 ## Author:
-The project was developed by [Sam Malikin]([https://www.linkedin.com/in/kelevv/]).
+The project was developed by [Sam Malikin](https://www.linkedin.com/in/kelevv/).
 
 ## License:
 This project is licensed under the terms of the [MIT] license.
