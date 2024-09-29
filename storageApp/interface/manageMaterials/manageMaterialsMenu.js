@@ -3,11 +3,16 @@ const { askQuestion } = require("../../utils/askQuestion");
 const messages = require("../../allMessages");
 const pause = require("../../utils/pause");
 
+const createElement = require("../manageElements/createElement");
+const deleteElement = require("../manageElements/deleteElement");
+const showElement = require("../manageElements/showElement");
+const addMaterialQuantity = require("./addMaterialQuantity");
+
+
 const {
   createMaterial,
   deleteMaterial,
   showMaterial,
-  addMaterialQuantity,
 } = require("./manageMaterialsFuncs");
 
 const manageMaterialsMenu = async () => {

@@ -1,14 +1,14 @@
+const Tool = require("../../models/tool");
+
 const clear = require("clear");
 const { askQuestion } = require("../../utils/askQuestion");
 const pause = require("../../utils/pause");
 const messages = require("../../allMessages");
 
-const {
-  createTool,
-  deleteTool,
-  showTool,
-  fixTool,
-} = require("./manageToolsFuncs");
+const createElement = require("../manageElements/createElement");
+const deleteElement = require("../manageElements/deleteElement");
+const showElement = require("../manageElements/showElement");
+const fixTool = require("./fixTool");
 
 const manageToolsMenu = async () => {
   while (true) {
@@ -20,15 +20,15 @@ const manageToolsMenu = async () => {
 
     switch (choice) {
       case "1":
-        await createTool();
+        await createElement(Tool, ["name", "cost", "usage", "condition"], 'Tool');
         await pause(1300);
         break;
       case "2":
-        await deleteTool();
+        await deleteElement(Tool, 'Tool');
         await pause(1300);
         break;
       case "3":
-        await showTool();
+        await showElement(Tool, 'Tool');
         await pause(3000);
         break;
       case "4":
