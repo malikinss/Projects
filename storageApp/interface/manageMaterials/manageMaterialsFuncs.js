@@ -1,9 +1,9 @@
 const Material = require("../../models/material");
 
 const { askQuestion } = require("../../utils/askQuestion");
-const findByName = require("../../utils/findByName");
 const messages = require('../../allMessages');
 const creatingQuestions = require("../manageDocs/creatingQuestions");
+const findElement = require("../manageDocs/findElement");
 
 const createMaterial = async () => {
   try {
@@ -22,7 +22,7 @@ const createMaterial = async () => {
 const deleteMaterial = async () => {
   try {
     console.log(messages.title.delete);
-    const material = await findMaterial();
+    const material = await findElement(Material, 'Material');
     await Material.findByIdAndDelete(material._id);
     console.log(messages.success.delete('Material' ,material.name));
   } catch (err) {
@@ -33,7 +33,7 @@ const deleteMaterial = async () => {
 const showMaterial = async () => {
   try {
     console.log(messages.title.info);
-    const material = await findMaterial();
+    const material = await findElement(Material, 'Material');
     
     const info = {
       name: material.name,
@@ -53,24 +53,13 @@ const showMaterial = async () => {
 const addMaterialQuantity = async () => {
   try {
     console.log(messages.title.addQuantity);
-    const material = await findMaterial();
+    const material = await findElement(Material, 'Material');
     const quantity = await askQuestion(messages.input.field('Material', "quantity"));
 
     await material.newArrival(quantity, 'Material');
   } catch (err) {
     console.error(messages.error.addFail(err.message));
   }
-};
-
-const findMaterial = async () => {
-  const name = await askQuestion(messages.input.field('Material', "name"));
-  const material = await findByName(Material, name);
-
-  if (!material) {
-    throw new Error(messages.error.searchFail('Material', name));
-  }
-
-  return material;
 };
 
 module.exports = {

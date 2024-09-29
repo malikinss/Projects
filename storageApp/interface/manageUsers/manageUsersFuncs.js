@@ -3,6 +3,7 @@ const User = require("../../models/User");
 const { askQuestion } = require("../../utils/askQuestion");
 const findByName = require("../../utils/findByName");
 const messages = require("../../allMessages");
+const findElement = require("../manageDocs/findElement");
 
 const creatingQuestions = require("../manageDocs/creatingQuestions");
 
@@ -39,7 +40,7 @@ const createUser = async () => {
 const deleteUser = async () => {
     try {
       console.log(messages.title.delete);
-      const user = await findUser();
+      const user = await findElement(User, 'User');
       await User.findByIdAndDelete(user._id);
       console.log(messages.success.delete('User', user.name));
     } catch (err) {
@@ -51,12 +52,12 @@ const deleteUser = async () => {
 const showUser = async () => {
     try {
       console.log(messages.title.info);
-      const user = await findUser();
+      const user = await findElement(User, 'User');
 
       const info = {
         name: user.name,
         age: user.age,
-        usedTools: user.usedTools(),
+        usedTools: await user.usedTools(),
       }
 
       console.log(messages.success.info('User', user.name));
@@ -71,7 +72,7 @@ const buildSomething = async () => {
   try {
     console.log(messages.title.build);
 
-    const user = await findUser();
+    const user = await findElement(User, 'User');
 
     // Loop for Tools
     const tools = await buildSomethingToolMenu();

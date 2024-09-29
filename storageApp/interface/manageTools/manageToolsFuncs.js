@@ -1,9 +1,8 @@
 const Tool = require("../../models/tool");
 
-const { askQuestion } = require("../../utils/askQuestion");
-const findByName = require("../../utils/findByName");
 const messages = require("../../allMessages");
 const creatingQuestions = require("../manageDocs/creatingQuestions");
+const findElement = require("../manageDocs/findElement");
 
 const createTool = async () => {
   try {
@@ -25,7 +24,7 @@ const createTool = async () => {
 const deleteTool = async () => {
   try {
     console.log(messages.title.delete);
-    const tool = await findTool();
+    const tool = await findElement(Tool, 'Tool');
     await Tool.findByIdAndDelete(tool._id);
     console.log(messages.success.delete('Tool', tool.name));
   } catch (err) {
@@ -33,17 +32,23 @@ const deleteTool = async () => {
   }
 };
 
+
+const getBorrowersNames = async (tool) => {
+  const populatedTool = await Tool.findById(tool._id).populate("borrowedBy", "name");
+  return populatedTool.borrowedBy.map(user => user.name);
+};
+
 const showTool = async () => {
   try {
     console.log(messages.title.info);
-    const tool = await findTool();
+    const tool = await findElement(Tool, 'Tool');
     
     const info = {
       name: tool.name,
       usage: tool.usage,
       cost: tool.cost,
       condition: tool.condition,
-      usedBy: tool.borrowedBy,
+      usedBy: await getBorrowersNames(tool),
     }
 
     console.log(messages.success.info('Tool', tool.name));
@@ -56,23 +61,12 @@ const showTool = async () => {
 const fixTool = async () => {
   try {
     console.log(messages.title.fix);
-    const tool = await findTool();
+    const tool = await findElement(Tool, 'Tool');
     await tool.fixTool();
     console.log(messages.success.fix('Tool', tool.name));
   } catch (err) {
     console.error(messages.error.fixFail(err));
   }
-};
-
-const findTool = async () => {
-  const name = await askQuestion(messages.input.field('Tool', "name"));
-  const tool = await findByName(Tool, name);
-
-  if (!tool) {
-    throw new Error(messages.error.searchFail('Tool', name));
-  }
-
-  return tool;
 };
 
 module.exports = { createTool, deleteTool, fixTool, showTool };

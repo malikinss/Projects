@@ -31,9 +31,11 @@ userSchema.methods.useTool = async function (toolName) {
   }
 };
 
-// Return the list of all tools used by that user
+
 userSchema.methods.usedTools = async function () {
-  return await Tool.find({ borrowedBy: this._id }).populate("borrowedBy");
+  const tools = await Tool.find({ borrowedBy: this._id }).populate("borrowedBy", "name");
+
+  return tools.map(tool => tool.name);
 };
 
 

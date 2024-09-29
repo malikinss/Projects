@@ -1,9 +1,8 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 const messages = require("../allMessages");
 
-const username = 'malikinssam';
-const pass = 'jLW15V4lxEQ1j4H9'
-const dbURI = `mongodb+srv://${username}:${pass}@cluster0.zujok.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+const dbURI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PSWD}@cluster0.zujok.mongodb.net/myDatabase?authSource=admin&retryWrites=true&w=majority&appName=Cluster0`;
 
 const connectDB = async () => {
     try {
