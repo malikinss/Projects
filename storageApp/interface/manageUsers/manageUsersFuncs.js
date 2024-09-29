@@ -1,71 +1,27 @@
 const User = require("../../models/User");
 
-const { askQuestion } = require("../../utils/askQuestion");
-const findByName = require("../../utils/findByName");
 const messages = require("../../allMessages");
-const findElement = require("../manageDocs/findElement");
+const findElement = require("../manageElements/findElement");
 
-const creatingQuestions = require("../manageDocs/creatingQuestions");
+const createElement = require("../manageElements/createElement");
+const deleteElement = require("../manageElements/deleteElement");
+const showElement = require("../manageElements/showElement");
 
 
 const buildSomethingToolMenu = require("./buildSomething/buildSomethingToolMenu");
 const buildSomethingMaterialMenu = require("./buildSomething/buildSomethingMaterialMenu");
 
-const findUser = async () => {
-  const name = await askQuestion(messages.input.field('User', "name"));
-  const user = await findByName(User, name);
-
-  if (!user) {
-    throw new Error(messages.error.searchFail('User', name));
-  }
-
-  return user;
-};
-
 const createUser = async () => {
-  try {
-    console.log(messages.title.create);
-
-    const answers = await creatingQuestions(["name", "age"], 'User');
-    const newUser = new User(answers);
-    await newUser.save();
-
-    console.log(messages.success.create('User', newUser.name));
-  } catch (err) {
-    console.error(messages.error.createFail(err));
-  }
+  await createElement(User, ["name", "age"], 'User');
 };
-
 
 const deleteUser = async () => {
-    try {
-      console.log(messages.title.delete);
-      const user = await findElement(User, 'User');
-      await User.findByIdAndDelete(user._id);
-      console.log(messages.success.delete('User', user.name));
-    } catch (err) {
-      console.error(messages.error.deleteFail(err));
-    }
-};
-
+  await deleteElement(User, 'User');
+}
 
 const showUser = async () => {
-    try {
-      console.log(messages.title.info);
-      const user = await findElement(User, 'User');
-
-      const info = {
-        name: user.name,
-        age: user.age,
-        usedTools: await user.usedTools(),
-      }
-
-      console.log(messages.success.info('User', user.name));
-      console.log(info);
-    } catch (err) {
-      console.error(messages.error.showFail(err));
-    }
-};
+  await showElement(User, 'User');
+}
 
 
 const buildSomething = async () => {

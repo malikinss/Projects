@@ -1,62 +1,23 @@
 const Tool = require("../../models/tool");
 
 const messages = require("../../allMessages");
-const creatingQuestions = require("../manageDocs/creatingQuestions");
-const findElement = require("../manageDocs/findElement");
+const findElement = require("../manageElements/findElement");
+
+const createElement = require("../manageElements/createElement");
+const deleteElement = require("../manageElements/deleteElement");
+const showElement = require("../manageElements/showElement");
 
 const createTool = async () => {
-  try {
-    console.log(messages.title.create);
-
-    const answers = await creatingQuestions(
-      ["name", "cost", "usage", "condition"],
-      'Tool'
-    );
-    const newTool = new Tool(answers);
-    await newTool.save();
-
-    console.log(messages.success.create('Tool', newTool.name));
-  } catch (err) {
-    console.error(messages.error.createFail(err));
-  }
+  await createElement(Tool, ["name", "cost", "usage", "condition"], 'Tool');
 };
 
 const deleteTool = async () => {
-  try {
-    console.log(messages.title.delete);
-    const tool = await findElement(Tool, 'Tool');
-    await Tool.findByIdAndDelete(tool._id);
-    console.log(messages.success.delete('Tool', tool.name));
-  } catch (err) {
-    console.error(messages.error.deleteFail(err));
-  }
-};
-
-
-const getBorrowersNames = async (tool) => {
-  const populatedTool = await Tool.findById(tool._id).populate("borrowedBy", "name");
-  return populatedTool.borrowedBy.map(user => user.name);
-};
+  await deleteElement(Tool, 'Tool');
+}
 
 const showTool = async () => {
-  try {
-    console.log(messages.title.info);
-    const tool = await findElement(Tool, 'Tool');
-    
-    const info = {
-      name: tool.name,
-      usage: tool.usage,
-      cost: tool.cost,
-      condition: tool.condition,
-      usedBy: await getBorrowersNames(tool),
-    }
-
-    console.log(messages.success.info('Tool', tool.name));
-    console.log(info);
-  } catch (err) {
-    console.error(messages.error.showFail(err));
-  }
-};
+  await showElement(Tool, 'Tool');
+}
 
 const fixTool = async () => {
   try {

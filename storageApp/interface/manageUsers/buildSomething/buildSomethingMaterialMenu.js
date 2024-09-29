@@ -1,6 +1,6 @@
 const { askQuestion } = require("../../../utils/askQuestion");
 const messages = require("../../../allMessages");
-const creatingQuestions = require("../../manageDocs/creatingQuestions");
+const creatingQuestions = require("../../manageElements/creatingQuestions");
 
 const buildSomethingMaterialMenu = async () => {
   const materials = [];

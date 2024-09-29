@@ -2,53 +2,23 @@ const Material = require("../../models/material");
 
 const { askQuestion } = require("../../utils/askQuestion");
 const messages = require('../../allMessages');
-const creatingQuestions = require("../manageDocs/creatingQuestions");
-const findElement = require("../manageDocs/findElement");
+const findElement = require("../manageElements/findElement");
+
+const createElement = require("../manageElements/createElement");
+const deleteElement = require("../manageElements/deleteElement");
+const showElement = require("../manageElements/showElement");
 
 const createMaterial = async () => {
-  try {
-    console.log(messages.title.create);
-
-    const answers = await creatingQuestions(['name', 'amount', 'cost', 'supplier', 'quality'], 'Material');
-    const newMaterial = new Material(answers);
-    await newMaterial.save();
-
-    console.log(messages.success.create("Material", newMaterial.name));
-  } catch (err) {
-    console.error(messages.error.createFail(err.message));
-  }
+  await createElement(Material, ['name', 'amount', 'cost', 'supplier', 'quality'], 'Material');
 };
 
 const deleteMaterial = async () => {
-  try {
-    console.log(messages.title.delete);
-    const material = await findElement(Material, 'Material');
-    await Material.findByIdAndDelete(material._id);
-    console.log(messages.success.delete('Material' ,material.name));
-  } catch (err) {
-    console.error(messages.error.deleteFail(err.message));
-  }
-};
+  await deleteElement(Material, 'Material');
+}
 
 const showMaterial = async () => {
-  try {
-    console.log(messages.title.info);
-    const material = await findElement(Material, 'Material');
-    
-    const info = {
-      name: material.name,
-      amount: material.amount,
-      cost: material.cost,
-      quality: material.quality,
-      supplier: material.supplier,
-    }
-
-    console.log(messages.success.info('Material', material.name));
-    console.log(info);
-  } catch (err) {
-    console.error(messages.error.showFail(err.message));
-  }
-};
+  await showElement(Material, 'Material');
+}
 
 const addMaterialQuantity = async () => {
   try {
